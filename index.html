@@ -26,28 +26,15 @@
     align-items: center;
   }
 
+  .project-item {
+    flex-basis: 100%;
+    padding: 0;
+    margin: 10px 0;
+  }
   .project-item img {
-  display: block;
-  margin: 0;
-  max-width: 100%;
-  max-height: none;
-}
-  .project-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 100%;
+    margin-right: 0;
   }
-
-
-  .project-item p{
-    font-size: 12px;
-    text-align: left;
-  }
-
-  .project-item h3{
-    font-size: 14px;
-  }
-
 
 
 } /* end @media max<767 */
@@ -303,10 +290,6 @@
 }
 
 
-
-
-
-
 .card.active {
   transform: translateY(0);
   z-index: 1;
@@ -319,28 +302,31 @@
   font: bold;
     }
 
-
-
-
-.project h3 {
+    .project h3 {
   padding-top: 5px;
   font-family: 'Apple System', sans-serif;
   font-size: 16px;
 }
 
 .project-container {
-  flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  gap: 100px;
+  flex-wrap: wrap;
+  margin: 0 -25px;
+  padding: 0 25px;
 }
 
 
 .project-item {
-  width: calc((100% - 20px) / 3);
-  max-width: 280px;
+  width: calc((100% - 50px) / 3);
+  max-width: 420px;
+  margin: 0 25px 50px 25px;
   transition: transform 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.338);
+  border-radius: 10px;
+  padding-top: 10px;
 }
+
 
 .project-item:hover {
   transform: scale(1.05);
@@ -358,9 +344,9 @@
 
 .project-item p{
   font-size: 14px;
+  padding-left: 5px;
+  padding-top: 5px;
 }
-
-
 
 .project-item img {
   display: block;
@@ -370,20 +356,16 @@
   max-width: 210px;
   max-height: 250px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  align-items: center;
+  margin: auto;
 }
-
 
 .project-item h3 {
     color:#BBFF35;
     font-size: 15px;
-  margin-top: 10px;
+    margin-top: 10px;
+    padding-left: 5px;
 }
 
-.project-item p {
-  color: white;
-  margin-top: 5px;
-}
 
 .cp-text{ color: rgba(0,0,0,.7); text-shadow: 0 1px rgba(255, 255, 255, 0.1);}
 
@@ -470,22 +452,50 @@
         <br>
         <div class="project-container">
           <div class="project-item">
-            <a href="https://github.com/stefanostakas/Bookmark-Basic-Google-Books-API-Implementation.">   <img src="assets/1.jpg" alt="Project Image" > </a>
-            <h3>Bookmark</h3>
-            <p>A RESTful API  that interacts with the Google Books API. It searches books, displays them, and allows users to save them to their personal library.</p>
+            <div class="project-image">
+              <a href="https://github.com/stefanostakas/Bookmark-Basic-Google-Books-API-Implementation.">   
+                <img class="project-img" src="assets/1.jpg" alt="Project Image"> 
+              </a>
+            </div>
+            <div class="project-text">
+              <h3>Bookmark</h3>
+              <p>A RESTful API  that interacts with the Google Books API. It searches books, displays them, and allows users to save them to their personal library.</p>
+            </div>
           </div>
           <div class="project-item">
-            <a href="https://github.com/stefanostakas/RickAndMorty-SpaceAdventures">    <img src="assets/2.jpg" alt="Project Image"> </a>
-            <h3>Rick and Morty: Space Adventures</h3>
-            <p> A space-themed arcade game developed using C++ and Simple Game Graphics Library.</p>
+            <div class="project-image">
+              <a href="https://github.com/stefanostakas/RickAndMorty-SpaceAdventures">    
+                <img class="project-img" src="assets/2.jpg" alt="Project Image"> 
+              </a>
+            </div>
+            <div class="project-text">
+              <h3>Rick and Morty: Space Adventures</h3>
+              <p> A space-themed arcade game developed using C++ and Simple Game Graphics Library.</p>
+            </div>
           </div>
           <div class="project-item">
-            <a href="https://github.com/stefanostakas/Cannibals-And-Missionaries-Calculator">  <img src="assets/3.jpg" alt="Project Image"> </a>
-            <h3>Boat Puzzle Calculator</h3>
-            <p>A Java application for solving the famous logic game "Missionaries and Cannibals" with an arbitrary number of people, using the A-Star algorithm.</p>
+            <div class="project-image">
+              <a href="https://github.com/stefanostakas/Cannibals-And-Missionaries-Calculator">  
+                <img class="project-img" src="assets/3.jpg" alt="Project Image"> 
+              </a>
+            </div>
+            <div class="project-text">
+              <h3>Boat Puzzle Calculator</h3>
+              <p>A Java application for solving the famous logic game "Missionaries and Cannibals" with an arbitrary number of people, using the A-Star algorithm.</p>
+            </div>
           </div>
-        </div>
-        </div>
+          <div class="project-item">
+            <div class="project-image">
+              <a href="https://github.com/stefanostakas/Text-Classification-Naive-Bayes">  
+                <img class="project-img" src="assets/4.jpg" alt="Project Image"> 
+              </a>
+            </div>
+            <div class="project-text">
+              <h3>Text Classification with Naive Bayes</h3>
+              <p>Java Machine Learning app uses Naive Bayes for text classification with two modes, training (CSV import) and testing (real-time text). <br> Ideal for spam detection and sentiment analysis.</p>
+            </div>
+          </div>
+        </div>        
       </div>
 
 
@@ -509,3 +519,4 @@ setTimeout(() => {
 
 
 </script>
+
